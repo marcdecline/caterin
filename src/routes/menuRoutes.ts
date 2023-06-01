@@ -71,4 +71,10 @@ router.delete('/:id', async (req: Request, res: Response) => {
   }
 });
 
+router.put('/:id', MenuController.updateMenu);
+
+router.delete('/:id', MenuController.deleteMenu);
+
+
+
 export default router;

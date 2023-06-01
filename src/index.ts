@@ -39,7 +39,7 @@ app.get('/menus', CocineroController.getMenus);
 app.post('/menus', MenuController.createMenu); // Agrega esta línea para la creación de menús
 
 mongoose
-  .connect('mongodb://mongo:27017/caterin', {
+  .connect('mongodb://mongo:27017/caterin?directConnection=true', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   } as ConnectOptions)
