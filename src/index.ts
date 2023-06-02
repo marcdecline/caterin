@@ -11,6 +11,8 @@ import empresaRoutes from './routes/empresaRoutes';
 import trabajadorRoutes from './routes/trabajadorRoutes';
 import cocineroRoutes from './routes/cocineroRoutes';
 import menuRoutes from './routes/menuRoutes';
+import authRoutes from './routes/authRoutes'; 
+
 
 import AdminController from './controllers/adminController';
 import EmpresaController from './controllers/empresaController';
@@ -52,6 +54,7 @@ mongoose
     app.use('/trabajador', trabajadorRoutes);
     app.use('/cocinero', cocineroRoutes);
     app.use('/menus', menuRoutes);
+    app.use('/auth', authRoutes);
 
     app.get('/', (req, res) => {
       res.send('Hello, World!');
